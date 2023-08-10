@@ -25,3 +25,12 @@
        }
    }
    ```
+3. Add these codes to your app/gradle.bundle
+   ```
+   apply plugin: 'com.google.gms.google-services' // <- Add this line
+   dependencies{
+      //...
+      implementation platform('com.google.firebase:firebase-bom:32.2.2')
+      implementation 'com.google.firebase:firebase-analytics'
+   }
+   ```
