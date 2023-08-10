@@ -60,10 +60,10 @@
 6. Add this repo to your root folder
 7. Add this function to your App.tsx
    ```
-     useEffect(() => {
+   useEffect(() => {
        requestUserPermission();
        notificationListener();
        GetFCMToken();
-     }, []);
+   }, []);
    ```
 8. Finally test in https://testfcm.com/ with your Server Key and your FCM Token
