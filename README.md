@@ -49,7 +49,13 @@
    ```
 5. Add this function to your $root/index.js
    ```
+   import messaging from '@react-native-firebase/messaging';
    
+   messaging().setBackgroundMessageHandler(async remoteMessage => {
+     console.log('Message handled in the background!', remoteMessage);
+   });
+   
+   AppRegistry.registerComponent(appName, () => App);
    ```
 6. Add this repo to your .src/utils
    ```
