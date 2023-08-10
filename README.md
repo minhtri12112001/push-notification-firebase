@@ -34,3 +34,29 @@
       implementation 'com.google.firebase:firebase-analytics'
    }
    ```
+4. Add this function to your App.tsx
+   ```
+   const App = () => {
+      //...
+      useEffect(() => {
+       const unsubscribe = messaging().onMessage(async remoteMessage => {
+         Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+       });
+       return unsubscribe;
+      }, []);
+   }
+   //...
+   ```
+5. Add this function to your $root/index.js
+   ```
+   
+   ```
+6. Add this repo to your .src/utils
+   ```
+   
+   ```
+7. Add this function to your App.tsx
+   ```
+   
+   ```
+8. Finally test in https://testfcm.com/ with your Server Key and your FCM Token
